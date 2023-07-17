@@ -1,0 +1,112 @@
+@import "../../../css-config/mixins.scss";
+
+.newsletter-section{
+    background: #f9f9f9 url("../../../assets/newsletter-bg.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+
+    .newsletter-content{
+        padding: 4rem 2rem;
+        width: fit-content;
+        
+        .small-text{
+            color:rgba(0, 0, 0, 0.7);
+            text-align: center;
+            text-transform: uppercase;
+            font-size: large;
+            font-weight: 500;
+            margin-bottom: 1rem;
+
+            @include md{
+                font-size: 25px;
+            }
+
+
+        }
+
+        .big-text{
+            font-size: larger;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 1rem;
+
+            @include md{
+                font-size: 30px;
+            }
+            
+        }
+
+        .form{
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            input{
+                padding: 10px;
+                font-size: medium;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+
+                @include md{
+                    width: 300px;
+                    font-size: large;
+                }
+            }
+            button{
+                padding: 10px;
+                font-size: medium;
+                color: white;
+                background: #8e2de2;
+                outline: 0;
+                border: 0;
+                border: 1px solid #6516aa;
+                border-radius: 4px;
+                margin-left: 2px;
+                @include md{
+                    padding: 10px 20px;
+                    font-size: large;
+                }
+
+            }
+        }
+
+        .text{
+            text-align: center;
+            margin-bottom: 1rem;
+
+            @include md{
+                font-size: large;
+            }
+        }
+
+        .social-icons{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+
+            .icon{
+                height: 40px;
+                width: 40px;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                border-radius: 50%;
+
+                @include md{
+                    height: 50px;
+                    width: 50px;
+                    font-size: 25px;
+                }
+                
+
+            }
+        }
+    }
+ 
+}

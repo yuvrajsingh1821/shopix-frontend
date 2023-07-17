@@ -1,0 +1,118 @@
+@import "../../css-config/mixins.scss";
+
+.footer{
+    width: 100%;
+    margin-top: 1rem;
+
+    .footer-content{
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 2rem;
+
+        @include md{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 30px;
+            margin: auto;
+        }
+
+
+        .about{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h2{
+                margin-bottom: 10px;
+            }
+            p{
+                color: rgba(0, 0, 0 , 0.6);
+
+            }
+
+        }
+
+        .contact{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            h2{
+                margin-bottom: 10px;
+            }
+
+            
+            .icons{
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                align-items: center;
+                color: rgba(0, 0, 0 , 0.6);
+
+                svg{
+                    margin-right: 6px;
+                }
+            }
+        }
+
+        .categories{
+            ul{
+                list-style: none;
+                margin-top: 15px;
+                color: rgba(0, 0, 0 , 0.6);
+
+                li{
+                    font-size: large;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .pages{
+            ul{
+                list-style: none;
+                margin-top: 15px;
+                color: rgba(0, 0, 0 , 0.6);
+
+
+                li{
+                    font-size: large;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        
+    }
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid rgba(0, 0, 0, 0.3);
+        align-items: center;
+        padding: 10px;
+        font-size: large;
+        color: rgba(0, 0, 0, 0.7);
+
+
+        @include md{
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: larger;
+        }
+
+        img{
+            height: 27px;
+            margin-top: 15px;
+
+            @include md{
+                height: 40px;
+            }
+
+        }
+
+    }
+}

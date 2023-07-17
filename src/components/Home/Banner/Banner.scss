@@ -1,0 +1,84 @@
+@import "../../../css-config/mixins.scss";
+
+.hero-banner{
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include md{
+        height: calc(100vh - 4rem);
+        flex-direction: row;
+    }
+
+    .text-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+
+        @include md{
+            width: 50%;
+            justify-content: center;
+        }
+
+        h1{
+            color: white;
+            font-size: 3rem;
+            @include md{
+                font-size: 5rem;
+            }
+        }
+
+        p{
+            color: white;
+            font-size: 20px;
+            line-height: 4;
+
+            @include md{
+                font-size: 30px;
+            }
+        }
+
+        .ctas{
+            display: flex;
+            margin-bottom: 2rem;
+            .banner-cta{
+                padding: 0.6rem;
+                font-size: large;
+                font-weight: 600;
+                background: transparent;
+                color: white;
+                border: 1px solid white;
+                margin: 0 10px;
+                border-radius: 4px;
+
+                @include md{
+                    padding: 0.6rem 1.5rem;
+                }
+
+                &.v2{
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+
+
+    }
+
+    .banner-img{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+
+        @include md{
+            width: 50%;
+        }
+        img{
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}

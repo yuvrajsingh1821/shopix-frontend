@@ -1,0 +1,80 @@
+@import "../../css-config/mixins.scss";
+
+.main-header{
+    display: flex;
+    height: 3.5rem;
+    background-color: #212121;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    @include md{
+        height: 4rem;
+        padding: 0 60px;
+    }
+
+    .nav{
+        display: none;
+
+        @include md{
+            display: flex;
+            font-size: 1.2rem;
+            ul{
+                list-style: none;
+                display: flex;
+                li{
+                    margin: 0 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .logo{
+        font-size: x-large;
+        font-weight: 500;
+
+        @include md{
+            font-size: xx-large;
+        }
+    }
+
+    .icons{
+        svg{
+            font-size: 20px;
+            margin: 0 5px;
+            cursor: pointer;
+
+            @include md{
+                font-size: x-large;
+                margin: 0 10px;
+            }
+        }
+
+        .cart-icon{
+            position: relative;
+
+            span{
+                background: #8e2de2;
+                padding: 2.5px;
+                font-size: 12px;
+                text-align: center;
+                border-radius: 10px;
+                min-width: 20px;
+                position: absolute;
+                line-height: 1;
+                left: 15px;
+                bottom: 15px;
+
+                @include md{
+                    left: 25px;
+                    bottom: 15px;
+                }
+            }
+        }
+    }
+}
